@@ -7,8 +7,8 @@ wachtwoorden en console wachtwoord.
 Je kan extra switches en pc’s toevoegen.<br>
 Je maakt:
 1. Plaats alles in 1 pdf bestand en upload het in blackboard.<br>
- Een netwerkdiagram (logical topology), maak gebruik van draw.io<br>
- Een adresseringsschema<br>
- Documentatie (configuraties, wachtwoorden, poorttoewijzingen…)<br>
- url naar je github<br>
-Je plaats 1 basis config van de switch en 1 van de router op je github.<br>
+    Een netwerkdiagram (logical topology), maak gebruik van draw.io<br>
+    Een adresseringsschema<br>
+    Documentatie (configuraties, wachtwoorden, poorttoewijzingen…)<br>
+    url naar je github<br>
+2. Plaats 1 basis config van de switch en 1 van de router op je github.
