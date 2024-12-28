@@ -1,0 +1,25 @@
+Router.config
+
+ssh:
+Router(config)#hostname Router1
+Router1(config)#ip domain-name pxl.be
+Router1(config)#crypto key generate rsa general-keys modulus 1024
+Router1(config)#username admin password PXL
+Router1(config)#line vty 0 15
+Router1(config)#transport input ssh
+Router1(config)#login local
+Router1(config)#end
+
+Config:
+Router1(config)#line console 0
+Router1(config-line)#password PXL
+Router1(config-line)#login
+Router1(config-line)#exit
+Router1(config)#enable secret PXL
+Router1(config)#service password-encryption
+Router1(config)#exit
+Router1#copy run start
+Destination filename [startup-config]? enter
+Building configuration...
+[OK]
+Router1#end

@@ -1,0 +1,24 @@
+Switch.config
+
+ssh:
+Switch(config)#hostname Switch1
+Switch1(config)#ip domain-name pxl.be
+Switch1(config)#crypto key generate rsa general-keys modulus 1024
+Switch1(config)#username admin password PXL
+Switch1(config)#line vty 0 15
+Switch1(config)#transport input ssh
+Switch1(config)#login local
+Switch1(config)#end
+
+Config:
+Switch1(config)#interface vlan 0
+Switch1(config-if)#ip address 192.168.1.2 255.255.255.0
+Switch1(config-if)#no shutdown
+Switch1(config-if)#exit
+Switch1(config)#ip default-gateway 192.168.1.1
+Switch1(config)#exit
+Switch1#copy run start
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch1#end
